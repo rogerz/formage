@@ -1,13 +1,13 @@
-input { width: 300px; }
-input[type="checkbox"], input[type="radio"] {
+input, .form-control { width: 300px; }
+input.form-control[type="checkbox"], input.form-control[type="radio"] {
     width: 1em;
 }
-select { min-width: 314px; }
-input[type="file"] {
+select.form-control { min-width: 314px; }
+input.form-control[type="file"] {
     width: 200px;
     margin-right: 15px;
 }
-textarea {
+textarea.form-control {
     width: 400px;
     height: 200px;
 }

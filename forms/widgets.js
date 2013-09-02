@@ -57,7 +57,7 @@ exports.InputWidget = Widget.extend({
         this._super(options);
     },
     render: function (res) {
-        res.write('\n<input' + (this.value ? ' value="' + escapeHTMLComponent(this.value) + '"' : '') );
+        res.write('\n<input class="form-control" ' + (this.value ? ' value="' + escapeHTMLComponent(this.value) + '"' : '') );
         this.render_attributes(res);
         res.write(' />\n');
         return this;
@@ -88,7 +88,7 @@ exports.PasswordWidget = exports.InputWidget.extend({
 
 exports.TextAreaWidget = Widget.extend({
     render: function (res) {
-        res.write('\n<textarea ');
+        res.write('\n<textarea class="form-control" ');
         this.render_attributes(res);
         res.write(' >\n');
         res.write(escapeHTMLComponent(this.value));
@@ -373,7 +373,7 @@ exports.MapWidget = exports.InputWidget.extend({
         if (!this.options.hide_address) {
             var address = this.value ? this.value.address : '';
             this.attrs['address_field'] = 'id_' + this.name + '_address';
-            res.write('\n<input type="text" name="' + this.name + '_address" id="id_' + this.name + '_address" value="' + address + '" />\n');
+            res.write('\n<input class="form-control" type="text" name="' + this.name + '_address" id="id_' + this.name + '_address" value="' + address + '" />\n');
         }
         var old_value = this.value;
         var lat = this.value && this.value.geometry ? this.value.geometry.lat : '';

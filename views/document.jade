@@ -20,7 +20,8 @@ block body
 
     - if (errors)
         p.alert.alert-error Saving failed, fix the following errors and try again.
-    form#document(enctype="multipart/form-data",method="post").clearfix
+
+    form#document(enctype="multipart/form-data", method="post", role="form").clearfix.form-inline
         != renderedDocument
         - if(subCollections && subCollections.length)
             - each sub in subCollections

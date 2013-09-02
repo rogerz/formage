@@ -124,7 +124,7 @@ if (errors)
 {
 buf.push("<p class=\"alert alert-error\">Saving failed, fix the following errors and try again.</p>");
 }
-buf.push("<form id=\"document\" enctype=\"multipart/form-data\" method=\"post\" class=\"clearfix\">" + (null == (jade.interp = renderedDocument) ? "" : jade.interp));
+buf.push("<form id=\"document\" enctype=\"multipart/form-data\" method=\"post\" role=\"form\" class=\"clearfix form-inline\">" + (null == (jade.interp = renderedDocument) ? "" : jade.interp));
 if(subCollections && subCollections.length)
 {
 // iterate subCollections
